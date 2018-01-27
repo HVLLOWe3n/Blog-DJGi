@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 def post_list(request):
 
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')    # sort and filter
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')   # sort and filter
     context = {
         'post': posts                                                                             # add posts to context
     }
