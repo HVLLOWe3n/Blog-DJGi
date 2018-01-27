@@ -8,17 +8,12 @@
     <div>
         <h1><a href="/">Blog- DJGi</a></h1>
     </div>
-
-    <div>
-        <p1>published: 27.02.2018, 15:51</p1>
-        <h2><a href="">My first post</a></h2>
-        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    </div>
-
-    <div>
-         <p1>published: 27.02.2018, 15:51</p1>
-        <h2><a href="">My first post</a></h2>
-        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    </div>
+    {% for p in post %}
+        <div>
+            <p1>published: {{ p.published_date }}</p1>
+            <h2><a href="">{{ p.title }}</a></h2>
+            <p>{{ p.text }}</p>
+        </div>
+    {% endfor %}
 </body>
 </html>
