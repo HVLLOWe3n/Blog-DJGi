@@ -25,7 +25,7 @@ SECRET_KEY = 'vc7bwa6p%anl)h56vukihnd^nbu262df#h@%bd&(bnbahxk1zn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'hvllo.pythonanywhere.com']    # add third-party host (pythonanywhere.com)
+ALLOWED_HOSTS = []    # add third-party host (pythonanywhere.com) '127.0.0.1', 'hvllo.pythonanywhere.com'
 
 
 # Application definition
