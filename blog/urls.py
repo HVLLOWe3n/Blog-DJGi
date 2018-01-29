@@ -3,5 +3,5 @@ from . import views                             # import file views from blog di
 
 urlpatterns = [
     path('', views.post_list),
-
+    path('post/(?P<pk>\d+)/', views.post_detail, name='post_detail')
 ]
