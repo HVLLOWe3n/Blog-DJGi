@@ -25,7 +25,7 @@ SECRET_KEY = 'vc7bwa6p%anl)h56vukihnd^nbu262df#h@%bd&(bnbahxk1zn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []    # add third-party host (pythonanywhere.com) '127.0.0.1', 'hvllo.pythonanywhere.com'
+ALLOWED_HOSTS = ['127.0.0.1', 'hvllo.pythonanywhere.com']    # add third-party host (pythonanywhere.com)
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',                                                 # include add 'blog'
+    'blog',                                                 # include app 'blog'
+    'account',
 ]
 
 MIDDLEWARE = [

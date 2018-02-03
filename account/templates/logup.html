@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Up - Blog-DJGi</title>
+</head>
+<body>
+    <form method="post"> {% csrf_token %}
+        {{ forms.as_table }}
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
