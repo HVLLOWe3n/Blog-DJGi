@@ -62,3 +62,9 @@ def post_edit(request, pk):
     }
     return render(request, 'blog/post_new.html', context)
 
+
+def about(requset):
+    context = {}
+
+    return render(requset, 'blog/about.html', context)
+

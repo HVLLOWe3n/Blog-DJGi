@@ -12,16 +12,22 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome/css/fontawesome.css' %}">
 </head>
 <body>
     <div class="page-header">
+        <a href="{% url 'about' %}" class="top-menu"><span class="btn btn-default">About</span></a>
+    
         {% if not user.is_authenticated %}
             <a href="{% url 'logup' %}" class="top-menu"><span class="btn btn-default">Log Up</span></a>
         {% endif %}
 
         {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'logout' %}" class="top-menu"><span class="btn btn-default">Log Out</span></a>
+            <a href="{% url 'post_new' %}" class="top-menu"><span title="Add new Post" class="glyphicon glyphicon-plus"></span></a>
         {% endif %}
 
         <h1><a href="/">Blog-DJGi</a></h1>
