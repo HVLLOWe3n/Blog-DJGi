@@ -43,7 +43,29 @@ class UserFormView(View):
 
 
 def logout_user(request):
-    context = { }
+    context = {}
     logout(request)
 
     return render(request, 'logout.html', context)
+
+
+class LogInUser(View):
+    def get(self, request):
+        context = {}
+
+        return render(request, 'logIn.html', context)
+
+    def post(self, request):
+        context = {}
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(username=username, password=password)
+
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return redirect('/')
+
+        else:
+            return render(request, 'logIn.html', context)
