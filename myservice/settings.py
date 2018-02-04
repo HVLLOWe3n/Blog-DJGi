@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'vc7bwa6p%anl)h56vukihnd^nbu262df#h@%bd&(bnbahxk1zn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []   # add third-party host (pythonanywhere.com) '127.0.0.1', 'hvllo.pythonanywhere.com'
+ALLOWED_HOSTS = ['127.0.0.1', 'hvllo.pythonanywhere.com']   # add third-party host (pythonanywhere.com)
 
 
 # Application definition
